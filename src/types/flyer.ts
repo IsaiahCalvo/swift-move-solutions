@@ -1,9 +1,8 @@
-
 export interface ServiceItem {
-  title: string;
+    title: string;
 }
 
 export interface FlyerProps {
-  companyName: string;
-  phone: string;
+    companyName: string;
+    phone: string;
 }

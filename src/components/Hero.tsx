@@ -29,14 +29,16 @@ const Hero = () => {
               <Button variant="hero-ghost" asChild>
                 <a href="#services">See Services</a>
               </Button>
-              <Button
-                variant="hero-ghost"
-                onClick={() => {
-                  window.open("/marketing-flyer/index.html", "_blank", "noopener,noreferrer");
-                }}
-              >
-                View Marketing Flyer
-              </Button>
+              {window.location.port === "5002" && (
+                <Button
+                  variant="hero-ghost"
+                  onClick={() => {
+                    window.open("/marketing-flyer/index.html", "_blank", "noopener,noreferrer");
+                  }}
+                >
+                  View Marketing Flyer
+                </Button>
+              )}
             </div>
 
             {/* Trust Items */}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { PricingCalculator } from "@/components/pricing/PricingCalculator";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -36,6 +37,7 @@ const Header = () => {
               {link.label}
             </a>
           ))}
+          {window.location.port === "5002" && <PricingCalculator />}
           <Button variant="accent" asChild>
             <a href="#quote">Get Quote</a>
           </Button>
@@ -65,6 +67,11 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
+            {window.location.port === "5002" && (
+              <div className="py-2">
+                <PricingCalculator />
+              </div>
+            )}
             <Button variant="accent" className="mt-2" asChild>
               <a href="#quote" onClick={() => setMobileOpen(false)}>Get Quote</a>
             </Button>
