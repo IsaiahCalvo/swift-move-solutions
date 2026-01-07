@@ -20,7 +20,7 @@ const Header = () => {
             CM
           </div>
           <div className="hidden sm:block">
-            <div className="font-display font-bold text-foreground">Calvo Move LLC</div>
+            <div className="font-display font-bold text-foreground">CB Operations</div>
             <div className="text-xs text-muted-foreground">Moving • Install • Cleanup • Site Prep • 24/7</div>
           </div>
         </a>
